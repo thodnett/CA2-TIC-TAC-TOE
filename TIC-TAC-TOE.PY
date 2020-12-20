@@ -122,3 +122,15 @@ def main():
         else:
             print('Sorry, O\'s won this time!')
             break
+        
+        if not(isWin(game_board, 'X')):
+            move = compMove()
+            if move == 0:
+                print('Tie Game!')
+            else:
+                insertLetter('O', move)
+                print('Computer placed an \'O\' in position', move , ':')
+                showBoard(game_board)
+        else:
+            print('X\'s won this time! Good Job!')
+            break
