@@ -113,7 +113,7 @@ def main():
     """Main function for gameplay.
     """
     print('Welcome to Tic Tac Toe!')
-    printBoard(board)
+    showBoard(game_board)
 
     while not(isBoardFull(game_board)):
         if not(isWin(game_board, 'O')):
@@ -134,3 +134,6 @@ def main():
         else:
             print('X\'s won this time! Good Job!')
             break
+
+    if isBoardFull(game_board):
+        print('Tie Game!')
