@@ -108,3 +108,17 @@ def isBoardFull(board):
         return False
     else:
         return True
+
+def main():
+    """Main function for gameplay.
+    """
+    print('Welcome to Tic Tac Toe!')
+    printBoard(board)
+
+    while not(isBoardFull(game_board)):
+        if not(isWin(game_board, 'O')):
+            humanMove()
+            showBoard(game_board)
+        else:
+            print('Sorry, O\'s won this time!')
+            break
