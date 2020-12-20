@@ -101,7 +101,7 @@ def selectRandom(li):
     return li[r]
     
 
-def isBoardFull(board):
+def isBoardFull(game_board):
     """Checks if the board is full
     """
     if game_board.count(' ') > 1:
@@ -137,3 +137,13 @@ def main():
 
     if isBoardFull(game_board):
         print('Tie Game!')
+
+while True:
+    answer = input('Do you want to play again? (Y/N)')
+    if answer.lower() == 'y' or answer.lower == 'yes':
+        game_board = [' ' for x in range(10)]
+        print('-----------------------------------')
+        main()
+    else:
+        print("Maybe another time!")
+        break
