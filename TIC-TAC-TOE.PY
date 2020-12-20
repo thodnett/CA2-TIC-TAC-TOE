@@ -91,3 +91,20 @@ def compMove():
             
     if len(edgesOpen) > 0:
         move = selectRandom(edgesOpen)
+
+def selectRandom(li):
+    """Selects a random move from the possible moves.
+    """
+    import random
+    ln = len(li)
+    r = random.randrange(0,ln)
+    return li[r]
+    
+
+def isBoardFull(board):
+    """Checks if the board is full
+    """
+    if game_board.count(' ') > 1:
+        return False
+    else:
+        return True
